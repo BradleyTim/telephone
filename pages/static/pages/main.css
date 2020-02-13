@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+/* HEADER CSS AND ITS CHILDREN */
+
+header {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+nav {
+    width: 90%;
+    padding: 1rem 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2.logo {
+    flex: 3;
+    font-size: 1.75rem;
+}
+
+ul.menu {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+li.menu-item {
+    font-size: 1.15rem;
+}
+
+/* MAIN CSS AND ITS CHILDREN */
+
+main {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+section.phones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 1rem;
+}
+
+/* FOOTER CSS AND ITS CHILDREN */
+
+footer {
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+footer .container {
+    width: 90%;
+    padding: 1rem 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+h5.copyright {
+    flex: 2;
+    /* justify-self: flex-end; */
+}
+
+ul.socials {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+li.social-item {
+    margin-left: 1rem;
+}

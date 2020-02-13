@@ -1,0 +1,13 @@
+{% extends 'pages/layout.html' %}
+
+{% block content %}
+    <section class="phones">
+        {% for phone in phones %}
+            <div class="card">
+                <h3>{{phone.name}}</h3>
+                <p class="brand">{{phone.brand}}</p>
+                <p class="price">{{phone.price}}</p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}
