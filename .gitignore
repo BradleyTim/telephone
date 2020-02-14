@@ -114,6 +114,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/midrange/settings.py
 venv
 .vscode
 /static
