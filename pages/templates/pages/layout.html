@@ -5,6 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'reviews/reviews.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'pages/main.css' %}">
         {% if title %}
             <title>MidRange - {{ title }}</title>
@@ -23,13 +24,13 @@
                 </h2>
                 <ul class="menu">
                     <li class="menu-item">
-                        <a href="#">Reviews</a>
-                    </li>
-                    <li class="menu-item">
                         <a href="#">Phones</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#">About</a>
+                        <a href="{% url 'reviews-index' %}">Reviews</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{% url 'pages-about' %}">About</a>
                     </li>
                 </ul>
             </nav>

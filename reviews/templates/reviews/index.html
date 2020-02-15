@@ -1,0 +1,25 @@
+{% extends 'pages/layout.html' %}
+
+{% block content %}
+    <section class="reviews">
+        <h1 class="reviews-page-title">REVIEWS</h1>
+        {% if reviews %}
+            {% for review in reviews %}
+                <article class="card">
+                    {% if review.image %}
+                        <div class="card-image">
+                            <img src="{{review.image.url}}" alt="Product Image">
+                        </div>
+                    {% endif %}
+                    <div class="card-text">
+                        <h3>{{review.title}}</h3>
+                        <p>{{review.content}}</p>
+                        <small>Reviewed by {{review.author}} on {{review.date_posted}}</small>
+                    </div>
+                </article>
+            {% endfor%}
+        {% else %}
+            <div class="no-content">It's lonely in here!</div>
+        {% endif %}
+    </section>
+{% endblock %}

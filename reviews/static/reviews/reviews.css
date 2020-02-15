@@ -1,0 +1,58 @@
+section.reviews {
+    width: 100%;
+    margin: 0 auto;
+}
+
+section.reviews h1.reviews-page-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+section.reviews article.card {
+    margin: 1rem 0;
+    padding: 0;
+    border: 2px solid #ddd;
+    border-radius: 2px;
+    max-width: 50%;
+    height: 20vh;
+    display: flex;
+}
+
+section.reviews article.card div.card-image{
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    /* object-fit: cover; */
+}
+
+section.reviews article.card div.card-image img {
+    width: 100%;
+    height: auto;
+    
+}
+
+section.reviews article.card div.card-text {
+    flex: 1;
+    width: 100%;
+    background: #eee;
+    padding-left: 1rem;
+}
+
+section.reviews article.card div.card-text h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+section.reviews article.card div.card-text p {
+   font-size: 1.25rem; 
+}
+
+section.reviews article.card div.card-text small {
+    font-size: .9rem;
+    color: #666
+}
+
+section.reviews .no-content {
+    font-size: 1.35rem;
+    font-weight: 400;
+}
