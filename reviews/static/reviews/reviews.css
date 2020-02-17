@@ -13,8 +13,8 @@ section.reviews article.card {
     padding: 0;
     border: 2px solid #ddd;
     border-radius: 2px;
-    max-width: 50%;
-    height: 20vh;
+    max-width: 60%;
+    height: 30vh;
     display: flex;
 }
 
