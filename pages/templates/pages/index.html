@@ -2,12 +2,17 @@
 
 {% block content %}
     <section class="phones">
-        {% for phone in phones %}
-            <div class="card">
-                <h3>{{phone.name}}</h3>
-                <p class="brand">{{phone.brand}}</p>
-                <p class="price">{{phone.price}}</p>
-            </div>
-        {% endfor %}
+        {% if phones %}
+            {% for phone in phones %}
+                <div class="card">
+                    <img class="picture" src="{{phone.image.url}}" alt="Device Image">
+                    <h3>{{phone.name}}</h3>
+                    <p class="brand">{{phone.brand}}</p>
+                    <p class="price">{{phone.price}}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div>THERE ARE CURRENTLY NO PHONES IN THE MIDRANGE DIRECTORY. SORRY!</div>
+        {% endif %}
     </section>
 {% endblock %}

@@ -70,6 +70,10 @@ section.phones {
     padding: 1rem;
 }
 
+.picture {
+    width: 100%;
+}
+
 /* FOOTER CSS AND ITS CHILDREN */
 
 footer {
