@@ -5,4 +5,4 @@ def index(request):
     context = {
         'reviews': Review.objects.all()
     }
-    return render(request, 'reviews/index.html', context)
+    return render(request, 'reviews/reviews.html', context)

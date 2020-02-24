@@ -3,9 +3,17 @@ section.reviews {
     margin: 0 auto;
 }
 
-section.reviews h1.reviews-page-title {
-    font-size: 2rem;
-    font-weight: 600;
+section.reviews div.reviews-sub-heading {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    border-bottom: 1.5px solid #eee;
+}
+
+section.reviews div.reviews-sub-heading h3{
+    letter-spacing: 1px;
+    font-size: 1.75rem;
+    font-weight: 300;
 }
 
 section.reviews article.card {

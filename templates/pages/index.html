@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% load humanize %}
+
+{% block content %}
+    <div class="sub-heading">
+        <h3>Featured Products</h3>
+    </div>
+    <section class="phones">
+        {% if phones %}
+            {% for phone in phones %}
+            <div class="card">
+                <img class="picture" src="{{phone.image.url}}" alt="Device Image">
+                <h3>{{phone.name}}</h3>
+                <p class="brand">{{phone.brand}}</p>
+                <p class="price">Ksh. {{phone.price | intcomma}}</p>
+                <a href="#" class="more-info">More Info</a>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </section>
+{% endblock %}

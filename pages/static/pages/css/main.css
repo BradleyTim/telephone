@@ -64,7 +64,21 @@ li.menu-item a {
 
 main {
     width: 90%;
-    margin: 2rem auto;
+    margin: 1rem auto;
+}
+
+div.sub-heading {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    border-bottom: 1.5px solid #eee;
+}
+
+div.sub-heading h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-left: 4%;
 }
 
 section.phones {
@@ -82,7 +96,19 @@ section.phones {
 }
 
 .picture {
-    width: 100%;
+    width: 80%;
+}
+
+.more-info {
+    display: block;
+    width: 70%;
+    margin: .5rem auto;
+    padding: .15rem 0;
+    border-radius: 2.5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 /* FOOTER CSS AND ITS CHILDREN */
@@ -95,7 +121,7 @@ footer {
 
 footer .container {
     width: 90%;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     margin: 0 auto;
     display: flex;
     align-items: center;
