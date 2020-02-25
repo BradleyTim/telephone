@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from shop.models import Phone
 
 
@@ -10,8 +10,11 @@ def index(request):
     return render(request, 'pages/index.html', context)
 
 
-# def phone_details(request, phone_id):
-#     return render(request, 'pages/phone-details.html')
+def phone_details(request, phone_id):
+    context = {
+        'phone': get_object_or_404(Phone, pk=phone_id)
+    }
+    return render(request, 'pages/phone-details.html', context)
 
 
 def about(request):

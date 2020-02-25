@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% load humanize %}
+
+{% block content %}
+    {% if phone %}
+        <div class="sub-heading-details">
+            <h3>{{phone.name}}</h3>
+        </div>
+        <section class="phone-details">
+            <div class="phone-image">
+                <img src="{{phone.image.url}}" alt="{{ phone.name }} image">
+            </div>
+            <div class="phone-specs">
+                <h3>Specifications</h3>
+                <p>
+                    <span class="strong">Screen</span>
+                    {{phone.screen}}
+                </p>
+                <p>
+                    <span class="strong">Colors</span> 
+                    {{phone.colors}}
+                </p>
+                <p>
+                    <span class="strong">Main Camera</span> 
+                    {{phone.main_camera}}
+                </p>
+                <p>
+                    <span class="strong">Selfie Camera</span> 
+                    {{phone.front_camera}}
+                </p>
+                <p>
+                    <span class="strong">OS</span> 
+                    {{phone.operating_system}}
+                </p>
+                <p>
+                    <span class="strong">CPU</span> 
+                    {{phone.cpu}}
+                </p>
+                <p>
+                    <span class="strong">RAM</span> 
+                    {{phone.ram}}
+                </p>
+                <p>
+                    <span class="strong">Storage</span> 
+                    {{phone.storage}}
+                </p>
+                <p>
+                    <span class="strong">Battery</span> 
+                    {{phone.battery}}
+                </p>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}
