@@ -14,7 +14,7 @@
                 <h3>{{phone.name}}</h3>
                 <p class="brand">{{phone.brand}}</p>
                 <p class="price">Ksh. {{phone.price | intcomma}}</p>
-                <a href="{% url 'pages-product-detail' phone.id %}" class="more-info">More Info</a>
+                <a href="{% url 'pages-product-detail' phone.id %}" class="more-info">SPECS</a>
             </div>
             {% endfor %}
         {% endif %}
