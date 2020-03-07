@@ -3,23 +3,25 @@
 {% block content %}
 <section class="reviews">
     <div class="reviews-sub-heading">
-        <h3>Products Reviews</h3>
+        <h3>Latest Reviews</h3>
     </div>
     {% if reviews %}
-        {% for review in reviews %}
-        <article class="card">
-            {% if review.image %}
-            <div class="card-image">
-                <img src="{{review.image.url}}" alt="Product Image">
-            </div>
-            {% endif %}
-            <div class="card-text">
-                <h3>{{review.title}}</h3>
-                <p>{{review.content}}</p>
-                <small>Reviewed by {{review.author}} on {{review.date_posted}}</small>
-            </div>
-        </article>
-        {% endfor%}
+        <div class="grid-container">
+            {% for review in reviews %}
+                <article class="card">
+                    {% if review.image %}
+                    <div class="card-image">
+                        <img src="{{review.image.url}}" alt="Product Image">
+                    </div>
+                    {% endif %}
+                    <div class="card-text">
+                        <h3>{{review.title}}</h3>
+                        <p>{{review.content | capfirst}}</p>
+                        <small>{{review.author | title}} | {{review.date_posted}}</small>
+                    </div>
+                </article>
+            {% endfor%}
+        </div>
     {% else %}
     <div class="no-content">It's lonely in here!</div>
     {% endif %}
