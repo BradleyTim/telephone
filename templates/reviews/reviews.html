@@ -8,18 +8,20 @@
     {% if reviews %}
         <div class="grid-container">
             {% for review in reviews %}
-                <article class="card">
-                    {% if review.image %}
-                    <div class="card-image">
-                        <img src="{{review.image.url}}" alt="Product Image">
-                    </div>
-                    {% endif %}
-                    <div class="card-text">
-                        <h3>{{review.title}}</h3>
-                        <p>{{review.content | capfirst}}</p>
-                        <small>{{review.author | title}} | {{review.date_posted}}</small>
-                    </div>
-                </article>
+                <a href="{% url 'review-details' review.id %}">
+                    <article class="card">
+                        {% if review.image %}
+                        <div class="card-image">
+                            <img src="{{review.image.url}}" alt="Product Image">
+                        </div>
+                        {% endif %}
+                        <div class="card-text">
+                            <h3>{{review.title}}</h3>
+                            <p>{{review.content | capfirst}}</p>
+                            <small>{{review.author | title}} | {{review.date_posted}}</small>
+                        </div>
+                    </article>
+                </a>
             {% endfor%}
         </div>
     {% else %}

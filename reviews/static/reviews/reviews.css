@@ -10,10 +10,20 @@ section.reviews div.reviews-sub-heading {
     border-bottom: 1.5px solid #eee;
 }
 
+section a {
+    text-decoration: none;
+}
+
 section.reviews div.reviews-sub-heading h3{
+    display: inline-block;
+    width: 13%;
+    margin: 0 auto;
     letter-spacing: 1px;
-    font-size: 1.75rem;
+    font-size: 1.15rem;
     font-weight: 300;
+    text-align: center;
+    /* background: #000;
+    color: #eee; */
 }
 
 section.reviews div.grid-container {

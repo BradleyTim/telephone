@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% load humanize %}
+
+{% block content %}
+    {% if review %}
+        <div class="sub-heading-details">
+            <h3>{{Review}}</h3>
+        </div>
+        <section class="review-details">
+            <h3>{{review.title}}</h3>
+            <small>{{review.author}}</small>
+            <div class="review-image">
+                <img src="{{review.image.url}}" alt="{{ review.title }} image">
+            </div>
+            <div class="reviw-content">
+                <p>
+                    {{review.content}}
+                </p>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}
